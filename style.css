@@ -119,8 +119,8 @@ input, select {
     /*フォントの名前*/
     font-family: 'ロンドB';
     /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
-    src: url("/Users/moesasaki/Downloads/ronde_square/Ronde-B_square.woff2") format("woff2"),
-         url("/Users/moesasaki/Downloads/ronde_square/Ronde-B_square.woff") format("woff");
+    src: url("Ronde-B_square.woff2") format("woff2"),
+         url("Ronde-B_square.woff") format("woff");
 
 }
 
