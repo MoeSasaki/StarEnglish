@@ -114,7 +114,6 @@ input, select {
 /* reset.css end */
 
 
-
 @font-face {
 
     /*フォントの名前*/
@@ -206,6 +205,9 @@ input, select {
 .menu .navi-menu ul li{
     text-align:center;
     padding:30px 20px;
+}
+.menu .nav-menu ul li a{
+    text-decoration: none;
 }
 .menu .navi-menu ul li .en{
     font-size:14px;
