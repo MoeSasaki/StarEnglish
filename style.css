@@ -68,6 +68,10 @@ a {
     background:transparent;
     
 }
+a:hover{
+    opacity:0.5;
+    transition:0.5s;
+}
 /* change colours to suit your needs */
 ins {
     background-color:#ff9;
@@ -110,7 +114,14 @@ hr {
 input, select {
     vertical-align:middle;
 }
-
+.sp{
+ display:none;
+}
+@media(max-width:450px){
+    .sp{
+        display:block;
+    }
+}
 /* reset.css end */
 
 
@@ -265,13 +276,14 @@ input, select {
     box-shadow: 0 0 0 #000;
     left:26%;
     top:71%;
+    opacity:1;
 }
 .hbg-menu{
     display:none;
 }
 .menu .navi-menu ul li a{
     display:block;
-
+    text-decoration:none;
 }
 .menu .navi-menu ul li a:hover{
     
@@ -281,6 +293,7 @@ input, select {
 .res-nav{
     display:none;
 }
+
 @media(max-width:1250px){
     .menu .navi-menu{
         margin-left: 20%;
@@ -402,6 +415,11 @@ input, select {
     .res-nav-batsu{
         position:absolute;
         top:20px; right:20px;
+        opacity:1;
+    }
+    
+    .res-nav-batsu:hover{
+        opacity:0;
     }
     .res-nav ul li a{
         font-family: "851テガキカクット";
@@ -457,6 +475,11 @@ input, select {
    .keyvisual .logo {
     height: 20px;
     margin-top:7px;
+    }
+}
+@media(max-width:350px){
+    .trial-button {
+        width: 28%;
     }
 }
 
@@ -678,7 +701,7 @@ input, select {
   background-repeat:no-repeat;
   width:70%;
   background-position:center;
-  color:#61a6a1;
+  color:#14706a;
 }
 .sec2 .confident .text-box h4{
     text-align:center;
@@ -694,7 +717,7 @@ input, select {
     background-image: url(images/bg-fun-tolearn.png);
     background-repeat:no-repeat;
     background-position:100% 0;
-    color:#f2accd;
+    color:#f51b80;
 }
 .sec2 .fun-tolearn .text-box{
     background-image:url(images/fun-tolearn-text-bg.png);
@@ -724,7 +747,7 @@ input, select {
 .sec2 .native-pronounce{
     background-image: url(images/bg-native-pronounce.png);
     background-repeat:no-repeat;
-    color:#ffa73e;
+    color:#ff8b00;
     background-size: contain;
 }
 .sec2 .native-pronounce .text-box{
@@ -775,7 +798,7 @@ input, select {
     }
     .sec2 .fun-tolearn{
         background-image:none;
-        height:280px;
+        height:320px;
         background-color:#f4bbc6;
         padding-top:40px;
     }
@@ -854,6 +877,14 @@ input, select {
     }
 
 }
+@media(max-width:350px){
+    .sec2 .fun-tolearn{
+      height:320px;
+    }
+    .sec2 .native-pronounce {
+        height:280px;
+    }
+}
 
 
 
@@ -891,6 +922,16 @@ input, select {
         padding-bottom:80px;
     }
 }
+@media(max-width:350px){
+    
+    .sec2 h2{
+        font-size:22px;
+    }
+    .sec2 h3{
+        font-size:14px;
+    }
+    
+}
 .classes-and-price .price-list{
     text-align:center;
     margin-bottom:80px;
@@ -907,24 +948,36 @@ input, select {
 .classes-and-price .time img{
     width:80%;
 }
-.contact-button{
-    padding:40px 40px;
-    box-sizing:border-box;
-    text-align:center;
-    margin:0 auto;
-    width:80%;
-    background-color:#f9c73e;
-    border-radius:10px;
-    box-shadow:  10px 10px#bbab68 ;
-    
-}
+
 .classes-and-price .view{
     opacity: 1;
+  }
+  .contact-button{
+      position:relative;
   }
 .contact-button a{
     color:#fff;
     text-decoration: none;
     font-size:24px;
+    padding:40px 40px;
+    box-sizing:border-box;
+    text-align:center;
+    margin:0 auto;
+    display:block;
+    width:80%;
+    background-color:#f9c73e;
+    border-radius:10px;
+    box-shadow:  10px 10px#bbab68 ;
+    position:absolute;
+    margin-top:60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.contact-button a:hover{
+    top:10px;
+    box-shadow: none;
+    opacity:1;
 }
 
 
@@ -946,14 +999,24 @@ input, select {
 
     .contact-button a{
         font-size:16px;
+        margin-top:0;
     }
     .classes-and-price .price-list{
         margin-bottom:50px;
     }
     
 }
+@media(max-width:350px){
+    .contact-button a{
+        padding:20px;
+    }
+}
 .news{
     background-color: #faf1ad;
+    padding-top:10%;
+}
+.news .sm-head{
+    margin-bottom:30px;
 }
 
 .news .news-box-bg{
@@ -968,6 +1031,7 @@ input, select {
 .news .news-box{
     position:absolute;
     top:22%;
+    width:100%;
 }
 .news .news-box-bg a{
     margin-top:2%;
@@ -1006,11 +1070,9 @@ input, select {
     color:#532d04;
     font-size:12px;
     font-weight:bold;
-    border:2px solid #532d04;
     width:60px;
     display:block;
     margin:10px auto;
-    padding:10px;
 }
 
 .teacher .name-card{
@@ -1067,8 +1129,6 @@ input, select {
     .news .news-box-bg .more{
         width:50px;
         font-size:8px;
-        padding:5px;
-        border:1px solid #532d04;
     }
 }
 @media(max-width:450px){
@@ -1076,13 +1136,21 @@ input, select {
         font-size:10px;
         margin-top:10px;
     }
+    .news .news-box-bg .news-inner .news-img{
+        width:45%;
+    }
+    .news .news-box-bg .news-inner{
+       margin-bottom:5%;
+    }
 }
+
 
 .free-trial{
     background-color: #faf1ad;
     text-align:center;
     padding-top:60px;
 }
+
 .free-trial img{
     width:100%;
 }
@@ -1205,6 +1273,11 @@ footer p{
         font-size:12px;
     }
 }
+@media(max-width:350px){
+    footer ul li a{
+        font-size:10px;
+    }
+}
 
 .loader {
     align-items: center;
@@ -1320,4 +1393,9 @@ textarea{
         font-size:12px;
     }
    
+}
+@media (max-width: 350px){
+label {
+    font-size: 10px;
+}
 }
